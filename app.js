@@ -18,7 +18,7 @@ cloudinary.config({
 //mongoose.connect("mongodb://localhost/primera_pagina");
 
 app.use(bodyParser.json());
-
+var port = process.env.PORT || 8080;
 app.use(bodyParser.urlencoded({extended:true}));
 /*
 var productSchemaJSON= {
@@ -134,4 +134,4 @@ app.delete("/menu/:id",middleware_upload,function(req,res){
 
 });
 
-app.listen(8080);
+app.listen(port);
