@@ -15,27 +15,27 @@ cloudinary.config({
 	api_secret:"isD_HqzwrFco6jlDzQD3hrqDJYA"
 });
 
-mongoose.connect("mongodb://localhost/primera_pagina");
+//mongoose.connect("mongodb://localhost/primera_pagina");
 
 app.use(bodyParser.json());
 
 app.use(bodyParser.urlencoded({extended:true}));
-
+/*
 var productSchemaJSON= {
 	title:String,
 	description:String,
 	imageUrl:String,
 	pricing:Number
-};
-var productSchema = new Schema(productSchemaJSON);
-productSchema.virtual("image.url").get(function(){
+};*/
+//var productSchema = new Schema(productSchemaJSON);
+/*productSchema.virtual("image.url").get(function(){
 	if(this.imageUrl==="" || this.imageUrl==="default.jpg" || this.imageUrl==="data.png"){
 		return "default.png";
 	}
 	return this.imageUrl;
 });
 var Product = mongoose.model("Product",productSchema);
-
+*/
 app.set("view engine","pug");
 
 app.use(express.static("public"));
