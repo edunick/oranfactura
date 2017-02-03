@@ -1,0 +1,20 @@
+extends ../layout.pug
+block contenido
+	div(class="col-md-5 center-block no-float top-space text-left")
+		h1 Agregar Producto
+		form(method="post" action="/menu" style="margin-top:1.5em;" enctype="multipart/form-data")
+			div(class="form-group")
+				label Nombre
+				input(type="text" name="title" placeholder="Nombre del producto" class="form-control")
+			div(class="form-group")
+				label Descripción
+				textarea(name="description" placeholder="Descripción del producto" class="form-control")
+			div(class="form-group")
+				label Costo
+				input(type="number" name="pricing" placeholder="Precio del producto" class="form-control")
+			div(class="form-group")
+				label Imagen del Producto
+				input(type="file" name="image_avatar")
+			div(class="form-group text-right")
+				input(type="submit" class="btn btn-info" value="Guardar")
+			
